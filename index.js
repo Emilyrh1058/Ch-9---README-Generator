@@ -7,41 +7,11 @@ const generateReadMe = require('./utils/generateMarkdown');
 const questions = [
     {
         type: "input",
-        name: "name",
-        message: "Hello! What is your name?",
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log("Please enter your name.");
-                return false;
-            }
-        }
-    },
-    {
-        type: "input",
-        name: "github",
-        message: "Enter your Github Username (Required)",
-        validate: githubInput => {
-            if (githubInput) {
-            return true;
-            } else {
-                console.log('Please enter your GitHub username!');
-                return false;
-            }
-        }
-    },
-    {
-        type: "input",
         name: "title",
         message: "Please provide your project title.",
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('A project name is required.');
-                return false;
-            }
+        validate: (titleInput) => {
+            if (titleInput) {return true;} 
+            else {return 'A project name is required'}
         }
     },
     {
@@ -55,60 +25,51 @@ const questions = [
         name: "contributors",
         message: "Please list the names of the contributors.",
         when: ({ confirmContributors }) => {
-            if (confirmContributors) {
-                return true;
-            } else {
-                return false;
-            }
+            if (confirmContributors) {return true;} 
+            else {return false;}
         }
     },
     {
-        type: "input",
+        type: "input",    // FIGURE THIS OUT!!
         name: "badge",
         message: "Please provide badge links."
     },
     {
-        type: "input",
+        type: "input", 
         name: "description",
-        message: "Please provide a desctription of this project.",
+        message: "Please provide a description of this project.",
         validate: descriptionInput => {
-            if (descriptionInput) {
-                return true;
-            } else {
-                console.log('A project description is required.');
-                return false;
-            }
+            if (descriptionInput) {return true;} 
+            else {return 'A project description is required.'}
+            // console.log('A project description is required.');
+                // return false;
         }
 
-    },
-    {
-        type: "input",
-        name: "installation",
-        message: "Please provide the installations instructions.",
-        validate: installationInput => {
-            if (installationInput) {
-                return true;
-            } else {
-                console.log("Installation instructions are required.")
-            }
-        }
     },
     {
         type: "input",
         name: "usage",
         message: "Please describe the usage for this project",
         validate: usageInput => {
-            if (usageInput) {
-                return true;
-            } else {
-                console.log("Usage information is required.")
-            }
+            if (usageInput) {return true;} 
+            else {return 'Usage information is required'}
+                // console.log("Usage information is required.")
+        }
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "Please provide the installations instructions.",
+        validate: installationInput => {
+            if (installationInput) {return true;} 
+            else {return 'Installation instruction are required'}
+            // console.log("Installation instructions are required.")
         }
     },
     {
         type: "list",
-        name: "licence",
-        message: "Please provide the licence information.",
+        name: "license",
+        message: "Please provide the license information.",
         choices: [
         "None",
         "Apache License 2.0",
@@ -127,33 +88,30 @@ const questions = [
         ]
     },
     {
-        type: "input",
+        type: "input",     // FIGURE THIS OUT !!
         name: "tests",
         message: "Please provide the project tests"
     }
-  ];
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err) {
-        if (err) {
-            return console.log(err);
+        if (err) {return console.log(err);
         }
-
-        console.log('Success!');
-        });
-  
+        console.log('Your README has been successfully created!');
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
-  .prompt(questions) 
+.prompt(questions) 
   // Write the user response to a file by chaining the below callback method to the prompt above.
-  .then(function(data) {
+.then(function(data) {
     // Bonus: Generate the name of your user file from their input
     writeToFile("README.md", generateReadMe.generateMarkdown(data));
-  });
+});
 
 }
 

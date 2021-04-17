@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateReadMe = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -36,10 +36,7 @@ const questions = [
         validate: descriptionInput => {
             if (descriptionInput) {return true;} 
             else {return 'A project description is required.'}
-            // console.log('A project description is required.');
-                // return false;
         }
-
     },
     {
         type: "input",
@@ -105,10 +102,8 @@ function init() {
   // Write the user response to a file by chaining the below callback method to the prompt above.
 .then(function(data) {
     // Bonus: Generate the name of your user file from their input
-    writeToFile("README.md", generateReadMe.generateMarkdown(data));
+    writeToFile("README.md", generateMarkdown(data));
 });
-
 }
-
 // Function call to initialize app
 init();

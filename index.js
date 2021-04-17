@@ -11,7 +11,7 @@ const questions = [
         message: "Please provide your project title.",
         validate: (titleInput) => {
             if (titleInput) {return true;} 
-            else {return 'A project name is required'}
+            else {return 'A project name is required.'}
         }
     },
     {
@@ -41,11 +41,10 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message: "Please describe the usage for this project",
+        message: "Please describe the usage for this project.",
         validate: usageInput => {
             if (usageInput) {return true;} 
-            else {return 'Usage information is required'}
-                // console.log("Usage information is required.")
+            else {return 'Usage information is required.'}
         }
     },
     {
@@ -54,8 +53,7 @@ const questions = [
         message: "Please provide the installations instructions.",
         validate: installationInput => {
             if (installationInput) {return true;} 
-            else {return 'Installation instruction are required'}
-            // console.log("Installation instructions are required.")
+            else {return 'Installation instruction are required.'}
         }
     },
     {
@@ -82,7 +80,7 @@ const questions = [
     {
         type: "input",     // FIGURE THIS OUT !!
         name: "tests",
-        message: "Please provide the project tests"
+        message: "Please provide the project tests."
     }
 ];
 

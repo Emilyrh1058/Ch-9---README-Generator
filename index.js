@@ -15,6 +15,16 @@ const questions = [
         }
     },
     {
+        type: "input",
+        name: "user",
+        message: "Please enter your GitHub username",
+        validate: (titleInput) => {
+            if (titleInput) {return true;} 
+            else {return 'A project name is required.'}
+        }
+    },
+
+    {
         type: "confirm",
         name: "confirmContributors",
         message: "Were there any other contributors to this project?",
@@ -62,18 +72,11 @@ const questions = [
         message: "Please provide the license information.",
         choices: [
         "None",
-        "Apache License 2.0",
-        "GNU General Public License v3.0",
-        "MIT License", 
-        "BSD T-Clause 'Simplified' License",
-        "BSD 3-Clause 'New' or 'Revised' License",
-        "Creative Commons Zero v1.0 Universal",
-        "Eclipse Public License 2.0",
-        "GNU Affero General Public License v2.1",
-        "GNU General Public License v2.0",
-        "GNU Lesser General Public License v2.1",
-        "GNU Lesser General Public License v3.0",
-        "Mozilla Public License 2.0",
+        "Apache",
+        "GNU",
+        "MIT", 
+        "Creative Commons",
+        "Mozilla",
         "The Unilicense",
         ]
     },
@@ -87,21 +90,18 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function(err) {
-        if (err) {return console.log(err);
-        }
+        if (err) {return console.log(err);}
         console.log('Your README has been successfully created!');
     });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer
-.prompt(questions) 
-  // Write the user response to a file by chaining the below callback method to the prompt above.
-.then(function(data) {
-    // Bonus: Generate the name of your user file from their input
-    writeToFile("README.md", generateMarkdown(data));
-});
+    inquirer.prompt(questions) 
+        .then(function(data) {
+        writeToFile("README.md", generateMarkdown(data));
+    });
 }
+
 // Function call to initialize app
 init();

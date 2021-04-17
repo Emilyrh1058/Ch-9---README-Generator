@@ -30,11 +30,6 @@ const questions = [
         }
     },
     {
-        type: "input",    // FIGURE THIS OUT!!
-        name: "badge",
-        message: "Please provide badge links."
-    },
-    {
         type: "input", 
         name: "description",
         message: "Please provide a description of this project.",
@@ -74,7 +69,7 @@ const questions = [
         "None",
         "Apache License 2.0",
         "GNU General Public License v3.0",
-        "MIT License",
+        "MIT License", 
         "BSD T-Clause 'Simplified' License",
         "BSD 3-Clause 'New' or 'Revised' License",
         "Creative Commons Zero v1.0 Universal",

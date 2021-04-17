@@ -1,9 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license !== 'None') {
-    return `![GitHub license](https://img.shields.io/github/license/Emilyrh1058/README-Generator?color=blue&style=for-the-badge)`
-    }
+  if (license === ('MIT License')) {
+    return `![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen)`
+  } else if (license === (Apache License 2.0)) {
+    return `![GitHub license](https://img.shields.io/badge/license-Apache-brightgreen)`
+  } else if ()
 
 
 // TODO: Create a function that returns the license link
@@ -30,19 +32,14 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ## License
-  ${data.license}
- 
+  ${renderLicenseBadge(data.license)}
 
   ## Tests
   ${data.tests}
 
 ## Walk-through video
- provide link here
+provide link here
 `;
 }
 
 module.exports = generateMarkdown;
-  // renderLicenseBadge,
-  // renderLicenseLink,
-  // renderLicenseSection,
-}

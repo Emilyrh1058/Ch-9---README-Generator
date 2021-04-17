@@ -1,10 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === 'MIT') {
-    return '![GitHub](https://img.shields.io/github/license/Emilyrh1058/README-Generator?color=blue&style=for-the-badge)'
-  }
-}
+  if (license !== 'None') {
+    return `![GitHub license](https://img.shields.io/github/license/Emilyrh1058/README-Generator?color=blue&style=for-the-badge)`
+    }
 
 
 // TODO: Create a function that returns the license link
@@ -32,6 +31,7 @@ function generateMarkdown(data) {
 
   ## License
   ${data.license}
+ 
 
   ## Tests
   ${data.tests}
@@ -46,4 +46,4 @@ module.exports = {
   renderLicenseBadge,
   renderLicenseLink,
   renderLicenseSection,
-}
+}}

@@ -1,8 +1,8 @@
 
-  # ere 
-  ### erere
+  # README Generator 
+  ### Emilyrh1058
   #### Contributors:
-  undefined
+  Salem16
 
   ![License: CC0-1.0](https://img.shields.io/badge/License-Apache-lightgrey.svg)
 
@@ -15,25 +15,25 @@
   * [Questions](#questions)
   
   ## Demo
-  [!Demo](https://drive.google.com/file/d/1sVn8TvGWqNYG8rel0a0Bl3W786FlWbmG/view)
+  [Demo Video](https://drive.google.com/file/d/1sVn8TvGWqNYG8rel0a0Bl3W786FlWbmG/view)
 
 
   ## Description
-  e
+  This application will seamlessly generate a REAMDE file for any project, provided the user submits responses to the prompted questions.
 
   ## Installation
-  e
+  README Generator uses Inquirer, which can be installed and executed by inputting the following command into your command line: npm i
   
   ## Usage
-  e
+  To use this application, install Inquirer and then you may use your command line to execute a full README file for your next project.
 
   ## Test Instruction
-  e
+  To test this application, simply type the following command into your command line: node index
 
   ## License
   For more information please visit: https://opensource.org/licenses/Apache-2.0
   
   ## Questions
-  For more information or questions about the README Generator, please contact <e>  
+  For more information or questions about the README Generator, please contact <emilyrh1058@gmail.com>  
   You may also visit my GitHub page here: https://github.com/Emilyrh1058
   

@@ -23,7 +23,6 @@ const questions = [
             else {return 'A project name is required.'}
         }
     },
-
     {
         type: "confirm",
         name: "confirmContributors",
@@ -80,11 +79,6 @@ const questions = [
         "The Unilicense",
         ]
     },
-    {
-        type: "input",     // FIGURE THIS OUT !!
-        name: "tests",
-        message: "Please provide the project tests."
-    }
 ];
 
 // TODO: Create a function to write README file

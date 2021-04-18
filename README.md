@@ -1,22 +1,19 @@
 
   # f 
   ### f
-  ![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)
+  ![License: CC0-1.0](https://img.shields.io/badge/License-Creative Commons-lightgrey.svg)
 
   ## Description
-  d
+  f
 
   ## Usage
-  d
+  f
 
   ## Installation
-  d
+  f
 
   ## License
 
-
-  ## Tests
-  d
 
 ## Demo
 You can find a walk through of this project **here**

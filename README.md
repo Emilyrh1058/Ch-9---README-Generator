@@ -1,10 +1,10 @@
 
-  # e 
-  ### e
+  # emilys project 
+  ### emilyrh
   #### Contributors:
-  ss
+  hh
 
-  ![License: CC0-1.0](https://img.shields.io/badge/License-Apache-lightgrey.svg)
+  ![License: CC0-1.0](https://img.shields.io/badge/License-GNU-lightgrey.svg)
 
   ## Table of Contents
   * [Description](#description)
@@ -15,21 +15,21 @@
   * [Questions](#questions)
 
   ## Description
-  e
+  g
 
   ## Installation
-  e
+  g
   
   ## Usage
-  e
+  g
 
   ## Test Instruction
-  e
+  g
 
   ## License
-  For more information please visit: https://opensource.org/licenses/Apache-2.0
+  For more information please visit: https://opensource.org/licenses/gpl-license
   
   ## Questions
-  For more information or questions about the README Generator, please contact <e>
+  For more information or questions about the README Generator, please contact <g>
 
   

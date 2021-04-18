@@ -23,22 +23,22 @@ const questions = [
             else {return 'A project name is required.'}
         }
     },
-    // {
-    //     type: "confirm",
-    //     name: "confirmContributors",
-    //     message: "Were there any other contributors to this project?",
-    //     validate: (confirmContributors) => {
-    //         if (confirmContributors) {return true;}
-    //         else {return ""}
-    //     }
-    // },
+    {
+        type: "confirm",
+        name: "confirmContributors",
+        message: "Were there any other contributors to this project?",
+        validate: (confirmContributors) => {
+            if (confirmContributors) {return true;}
+            else {return ""}
+        }
+    },
     {
         type: "input",
         name: "contributors",
-        message: "Please list the names of any contributors.",
-        validate: confirmContributors => {
+        message: "Please list the names of the contributors.",
+        when: ({ confirmContributors }) => {
             if (confirmContributors) {return true;} 
-            else {return ""}
+            else {return false;}
         }
     },
     {

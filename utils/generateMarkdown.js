@@ -63,7 +63,7 @@ function generateMarkdown(data) {
   
   ## Questions
   For more information or questions about the README Generator, please contact <${data.email}>
-
+  You may also visit my GitHub page here: https://github.com/Emilyrh1058
   `;
 }
 

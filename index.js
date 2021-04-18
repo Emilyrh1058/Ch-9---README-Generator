@@ -23,19 +23,22 @@ const questions = [
             else {return 'A project name is required.'}
         }
     },
-    {
-        type: "confirm",
-        name: "confirmContributors",
-        message: "Were there any other contributors to this project?",
-        default: true
-    },
+    // {
+    //     type: "confirm",
+    //     name: "confirmContributors",
+    //     message: "Were there any other contributors to this project?",
+    //     validate: (confirmContributors) => {
+    //         if (confirmContributors) {return true;}
+    //         else {return ""}
+    //     }
+    // },
     {
         type: "input",
         name: "contributors",
-        message: "Please list the names of the contributors.",
-        when: ({ confirmContributors }) => {
+        message: "Please list the names of any contributors.",
+        validate: confirmContributors => {
             if (confirmContributors) {return true;} 
-            else {return false;}
+            else {return ""}
         }
     },
     {
@@ -49,6 +52,15 @@ const questions = [
     },
     {
         type: "input",
+        name: "installation",
+        message: "Please provide the installations instructions.",
+        validate: installationInput => {
+            if (installationInput) {return true;} 
+            else {return 'Installation instruction are required.'}
+        }
+    },
+    {
+        type: "input",
         name: "usage",
         message: "Please describe the usage for this project.",
         validate: usageInput => {
@@ -58,11 +70,11 @@ const questions = [
     },
     {
         type: "input",
-        name: "installation",
-        message: "Please provide the installations instructions.",
-        validate: installationInput => {
-            if (installationInput) {return true;} 
-            else {return 'Installation instruction are required.'}
+        name: "test",
+        message: "Please provide testing instruction.",
+        validate: testInput => {
+            if (testInput) {return true;} 
+            else {return 'Test instruction are required.'}
         }
     },
     {
@@ -79,6 +91,15 @@ const questions = [
         "The Unilicense",
         ]
     },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter your email address for further questions about the project.",
+        validate: emailInput => {
+            if (emailInput) {return true;}
+            else {return 'Email address is required.'}
+        }
+    }
 ];
 
 // TODO: Create a function to write README file
